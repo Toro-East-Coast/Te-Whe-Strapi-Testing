@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_content_content_blocks",
+  "info": {
+    "displayName": "content-block"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "audio",
+        "video",
+        "image"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "order": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

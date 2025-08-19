@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "curricula",
+  "info": {
+    "singularName": "curriculum",
+    "pluralName": "curricula",
+    "displayName": "Curriculum"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "is_published": {
+      "type": "boolean"
+    },
+    "order": {
+      "type": "integer",
+      "default": 1
+    },
+    "estimated_duration": {
+      "type": "integer"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "units": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::unit.unit",
+      "mappedBy": "curriculum"
+    },
+    "vocabularies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::vocabulary.vocabulary",
+      "mappedBy": "curricula"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lessons",
+  "info": {
+    "singularName": "lesson",
+    "pluralName": "lessons",
+    "displayName": "Lesson"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "is_published": {
+      "type": "boolean"
+    },
+    "estimated_duration": {
+      "type": "integer"
+    },
+    "content_blocks": {
+      "type": "component",
+      "component": "content.content-block",
+      "repeatable": true
+    },
+    "activities": {
+      "type": "component",
+      "component": "activities.activity-block",
+      "repeatable": true
+    },
+    "unit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::unit.unit",
+      "inversedBy": "lessons"
+    }
+  }
+}

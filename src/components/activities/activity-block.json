@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_activities_activity_blocks",
+  "info": {
+    "displayName": "activity-block"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "mcq",
+        "fill-in",
+        "listening-prompt"
+      ]
+    },
+    "question": {
+      "type": "text"
+    },
+    "options": {
+      "type": "json"
+    },
+    "correct_answer": {
+      "type": "string"
+    },
+    "audio_prompt": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "points": {
+      "type": "integer",
+      "default": 10
+    }
+  },
+  "config": {}
+}

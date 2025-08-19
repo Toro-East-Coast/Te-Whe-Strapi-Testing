@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "Unit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "is_published": {
+      "type": "boolean"
+    },
+    "curriculum": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::curriculum.curriculum",
+      "inversedBy": "units"
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson",
+      "mappedBy": "unit"
+    }
+  }
+}
